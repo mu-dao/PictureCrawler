@@ -1,24 +1,20 @@
 package main;
 
-//import java.io.BufferedReader;
-//import java.io.InputStreamReader;
-//import java.net.URL;
-//import java.net.URLConnection;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args){
-		System.out.println("ÇëÊäÈëÒªÅÀÈ¡Í¼Æ¬µÄÍøÖ·£¬²»ĞèÒª¼ÓhttpÍ·");
+		System.out.println("è¯·è¾“å…¥è¦çˆ¬å–å›¾ç‰‡çš„ç½‘å€ï¼Œä¸éœ€è¦åŠ httpå¤´");
 		Scanner input = new Scanner(System.in);
 		String web = input.nextLine();
 		
-		System.out.println("ÇëÊäÈëÒª´æ´¢Í¼Æ¬µÄÎÄ¼ş¼ĞÂ·¾¶");
+		System.out.println("è¯·è¾“å…¥è¦å­˜å‚¨å›¾ç‰‡çš„æ–‡ä»¶å¤¹è·¯å¾„");
 		String outputPath = input.nextLine();
 		input.close();
 		
         List<String> list = TextHelper.get(web);
         FileHelper.downLoad(list, web, outputPath);
-        System.out.println("ÅÀÈ¡³É¹¦");
+        System.out.println("çˆ¬å–æˆåŠŸ");
     }
 }
